@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Urban Company — Voice of Customer Diagnostic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1E2A26;
+    --paper: #EFEADC;
+    --panel: #F7F4EA;
+    --hazard: #D98F2B;
+    --hazard-bg: #F6E4C4;
+    --alarm: #A83B32;
+    --alarm-bg: #F2D6D2;
+    --steel: #3E5C63;
+    --steel-bg: #DCE6E7;
+    --ash: #8B8574;
+    --line: #D8D0BB;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 28px 24px 60px; }
+
+  .letterhead {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 14px;
+    margin-bottom: 4px;
+  }
+  .letterhead h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .letterhead .sub {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--ash);
+    margin-top: 4px;
+  }
+  .stamp {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    border: 1.5px solid var(--alarm);
+    color: var(--alarm);
+    padding: 5px 10px;
+    transform: rotate(-2deg);
+    white-space: nowrap;
+  }
+
+  .stats-row {
+    display: flex;
+    gap: 28px;
+    padding: 14px 0 24px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 24px;
+  }
+  .stat .num {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .stat .label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ash);
+    margin-top: 4px;
+  }
+
+  .section-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ash);
+    margin: 0 0 10px;
+  }
+
+  .quadrant-wrap {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    padding: 20px;
+    margin-bottom: 28px;
+  }
+
+  .quadrant-legend {
+    display: flex;
+    gap: 20px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    color: var(--ash);
+    margin-top: 10px;
+  }
+  .quadrant-legend span { display: flex; align-items: center; gap: 6px; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+
+  .board {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+
+  .ticket-list { display: flex; flex-direction: column; gap: 8px; }
+  .ticket {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--ash);
+    padding: 10px 12px;
+    cursor: pointer;
+  }
+  .ticket.sev-critical { border-left-color: var(--alarm); }
+  .ticket.sev-high { border-left-color: var(--hazard); }
+  .ticket.active { outline: 2px solid var(--ink); outline-offset: -1px; }
+  .ticket-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .ticket-name { font-weight: 500; font-size: 13px; line-height: 1.3; }
+  .badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 2px 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .badge.sev-critical { background: var(--alarm-bg); color: var(--alarm); }
+  .badge.sev-high { background: var(--hazard-bg); color: #8C5A16; }
+  .ticket-meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    color: var(--ash);
+    margin-top: 4px;
+  }
+
+  .detail {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    padding: 22px;
+    min-height: 320px;
+  }
+  .detail-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 4px; }
+  .detail-title { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; margin: 0; }
+  .detail-meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--ash);
+    margin: 6px 0 18px;
+  }
+  .detail-block { margin-bottom: 18px; }
+  .detail-block h4 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--steel);
+    margin: 0 0 6px;
+  }
+  .detail-block p { margin: 0; line-height: 1.55; font-size: 13.5px; }
+  .quote {
+    font-size: 13px;
+    line-height: 1.5;
+    border-left: 2px solid var(--line);
+    padding-left: 10px;
+    margin: 8px 0;
+    color: #3A362D;
+  }
+  .quote .rid {
+    display: block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: var(--ash);
+    margin-top: 3px;
+  }
+
+  @media (max-width: 720px) {
+    .board { grid-template-columns: 1fr; }
+    .stats-row { flex-wrap: wrap; gap: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="letterhead">
+    <div>
+      <h1>Voice of customer — diagnostic report</h1>
+      <div class="sub">SUBJECT: URBAN COMPANY (com.urbanclap.urbanclap) · SOURCE: PLAY STORE REVIEWS</div>
+    </div>
+    <div class="stamp">2 CRITICAL FLAGS</div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat"><div class="num" id="stat-total">-</div><div class="label">Reviews analyzed</div></div>
+    <div class="stat"><div class="num" id="stat-themes">-</div><div class="label">Themes found</div></div>
+    <div class="stat"><div class="num" id="stat-critical">-</div><div class="label">Critical severity</div></div>
+    <div class="stat"><div class="num" id="stat-longtail">-</div><div class="label">Long tail items</div></div>
+  </div>
+
+  <div class="section-label">Severity vs frequency — count alone hides the fires</div>
+  <div class="quadrant-wrap">
+    <svg id="quadrant" viewBox="0 0 760 320" width="100%" style="display:block;"></svg>
+    <div class="quadrant-legend">
+      <span><span class="dot" style="background:#A83B32;"></span>Critical severity</span>
+      <span><span class="dot" style="background:#D98F2B;"></span>High severity</span>
+      <span style="color:#B0AA96;">dot size = confidence</span>
+    </div>
+  </div>
+
+  <div class="section-label">Ticket queue — sorted by severity, then frequency</div>
+  <div class="board">
+    <div class="ticket-list" id="ticket-list"></div>
+    <div class="detail" id="detail"></div>
+  </div>
+
+</div>
+
+<script>
+const DATA = {
+  "sample_size": 153,
+  "themes": [
+    {"theme_name":"Unreliable Bookings and Cancellations (Instahelp & general)","count":31,"percent_of_sample":20.26,"severity":"high","confidence":"high",
+      "root_cause":"Likely due to insufficient supply of service professionals for the demand, poor workforce management/scheduling, or a system that allows professionals to cancel without adequate penalty or a robust backup system.",
+      "recommendation":"Improve real-time availability and scheduling algorithms to prevent overbooking and last-minute cancellations. Implement a stronger penalty system for professionals who cancel without valid reasons.",
+      "example_quotes":[
+        {"review_id":"1d31d79c-d7ec-456b-a0c0-e9cc8771487c","quote":"Don't trust Urban company anymore for insta help. if you have done prior booking for weekend they will cancel it last moment and then no slot will be available for the day."},
+        {"review_id":"0c9292df-939d-4024-a831-621a5840ba3c","quote":"extremely disappointing experience with instant help. In one day they've cancelled 4 bookings back to back at the last minute."}
+      ]},
+    {"theme_name":"Poor or Non-Existent Customer Support (AI Chatbot focus)","count":21,"percent_of_sample":13.73,"severity":"high","confidence":"high",
+      "root_cause":"Over-reliance on automated AI chatbots for complex or sensitive issues where human intervention is required, and a lack of clear pathways for escalation to human support.",
+      "recommendation":"Integrate an escalation path for AI chatbot interactions to human customer service for unresolved or complex issues.",
+      "example_quotes":[
+        {"review_id":"840ef51d-7d2c-4ffb-99b1-a7455c3cd8d9","quote":"No point in replying here. Untrustworthy service, no customer care just useless AI with repeated responses."},
+        {"review_id":"b23d232f-a389-44c0-aa01-c69b2c90bb5f","quote":"when you have a problem with a professional, u can't connect to customer care they will suggest talking to a robot."}
+      ]},
+    {"theme_name":"Deceptive Pricing and Hidden Charges","count":14,"percent_of_sample":9.15,"severity":"high","confidence":"high",
+      "root_cause":"System design that allows for dynamic pricing or additional fees to be added after initial booking confirmation without clear, upfront disclosure.",
+      "recommendation":"Implement a transparent, final price confirmation screen before payment, clearly detailing all charges.",
+      "example_quotes":[
+        {"review_id":"a15b73c6-85da-44d6-9c4e-fb95ba687e88","quote":"Deceptive bait-and-switch! They lure you with a ₹49 service, but sneakily add a ₹99 visitation fee and platform charges, auto-debiting ₹158 from your wallet without showing a final total screen."},
+        {"review_id":"d81fbd58-46fb-4eab-baf2-9b7d0d5069f2","quote":"Urban Company shows a low price before booking but charges a much higher amount after the visit. This is misleading and feels like a pricing scam."}
+      ]},
+    {"theme_name":"Substandard Service Quality and Unprofessional Technicians","count":13,"percent_of_sample":8.5,"severity":"high","confidence":"high",
+      "root_cause":"Inadequate vetting, training, or quality control for service professionals. Lack of standardized diagnostic procedures or quality checks after service completion.",
+      "recommendation":"Strengthen professional training and certification programs. Implement mandatory checklists for diagnostics and service completion.",
+      "example_quotes":[
+        {"review_id":"95d3d28a-7bca-4c8b-940b-d58bec25f6a7","quote":"After my first AC service, the AC started leaking water within days because the outdoor unit wasn't serviced properly. Poor workmanship, unnecessary upselling, and lack of transparency."},
+        {"review_id":"ccbf6b1c-14f4-4afa-af74-0ae3456f118d","quote":"The technician immediately said the sensor was faulty. When the Haier technician came, they found that the sensor was perfectly fine, the actual issue was simply low refrigerant gas."}
+      ]},
+    {"theme_name":"Refund Issues and Warranty Not Honored","count":10,"percent_of_sample":6.54,"severity":"critical","confidence":"high",
+      "root_cause":"Inconsistent application of refund policies, opaque cancellation fee structures, and a lack of clear, enforced warranty terms.",
+      "recommendation":"Standardize and clearly publish all refund and warranty policies. Ensure the system automatically processes appropriate refunds for canceled or unfulfilled services.",
+      "example_quotes":[
+        {"review_id":"d3a6e040-b8dc-4023-b0f8-8756c5d4905f","quote":"UC is not refunding the ₹9000 they charged for PCB repair of my AC which got damaged beyond repair within the warranty. They are not even bothering to respond to my messages. This is a fraud."},
+        {"review_id":"6fd192d8-b636-4dbd-bedf-f0ad1db3d371","quote":"Warranty given on AC servicing was of 30 days and the issue reoccurred and when I went back to claim my warranty I am shocked to see it's decreased to 10 days and already expired. Taking it to consumer court."}
+      ]},
+    {"theme_name":"Safety Concerns and Misconduct by Professionals","count":6,"percent_of_sample":3.92,"severity":"critical","confidence":"high",
+      "root_cause":"Insufficient background checks and vetting for professionals. Lack of clear safety protocols and an effective emergency response system.",
+      "recommendation":"Implement rigorous background checks for all professionals. Establish clearly communicated safety protocols, including options for female-only professionals for sensitive services. Create a dedicated, responsive emergency helpline.",
+      "example_quotes":[
+        {"review_id":"74b52b11-70d8-4b31-9909-929a18d98107","quote":"Don't book any service from Urban Company. Technician came to my house and threatened my mother, and stole money and jewelry. I tried calling the emergency number but they didn't pick up."},
+        {"review_id":"438f87ed-4588-4c09-8643-af73742d9f73","quote":"By design this app is not safe. You book services for female members of your family, and they will assign some random male professional. This platform is least concerned about women's safety."}
+      ]},
+    {"theme_name":"Issues with Native RO Products & Warranty","count":7,"percent_of_sample":4.58,"severity":"high","confidence":"high",
+      "root_cause":"Lack of dedicated, accessible support channels for Native RO products within the app. Possible product quality issues leading to frequent breakdowns.",
+      "recommendation":"Create a dedicated support flow within the app for Native RO products, ensuring clear access to technicians and warranty claims.",
+      "example_quotes":[
+        {"review_id":"934fb645-cf8e-462d-b483-2ab6e35bcd5d","quote":"They also do not honor their warranty claim on their Native RO by making excuses which are not mentioned anywhere in their terms. Stay away from UC and Native RO. 2 year warranty is a scam."},
+        {"review_id":"6f587a78-8d6b-4d23-9aa5-c77739bde691","quote":"I purchased a Native M1 Water Filter, and within a year, the water tap got damaged. I paid ₹316 for a repair request, but even after 10 days, no technician has visited."}
+      ]}
+  ],
+  "long_tail": [
+    "Unfair exploitation of service partners (high commissions, penalties, lack of safety and respect)",
+    "Removal or discontinuation of services in certain areas (Instahelp, specific beauty treatments)",
+    "Misleading service descriptions (chimney cleaning, massage services)",
+    "Damaged property by technicians with no resolution or refund",
+    "App design flaws (OTP timing issues, inability to update address, missing cash-on-delivery)",
+    "Inability to connect Native M2 Pro product",
+    "Company not available in customer's specific geographic area"
+  ]
+};
+
+const SEV_ORDER = { critical: 0, high: 1, medium: 2, low: 3 };
+const SEV_COLOR = { critical: '#A83B32', high: '#D98F2B', medium: '#3E5C63', low: '#8B8574' };
+const CONF_SIZE = { high: 8, medium: 6, low: 4.5 };
+
+const sorted = [...DATA.themes].sort((a,b) => SEV_ORDER[a.severity]-SEV_ORDER[b.severity] || b.count-a.count);
+
+document.getElementById('stat-total').textContent = DATA.sample_size;
+document.getElementById('stat-themes').textContent = DATA.themes.length;
+document.getElementById('stat-critical').textContent = DATA.themes.filter(t=>t.severity==='critical').length;
+document.getElementById('stat-longtail').textContent = DATA.long_tail.length;
+
+function drawQuadrant() {
+  const svg = document.getElementById('quadrant');
+  const W = 760, H = 320, PAD = 46;
+  const maxCount = Math.max(...DATA.themes.map(t=>t.count));
+  const sevY = { critical: 3, high: 2, medium: 1, low: 0 };
+  const x = c => PAD + (c / (maxCount * 1.1)) * (W - PAD*2);
+  const y = s => H - 40 - (s / 3.3) * (H - 80);
+
+  let svgContent = '';
+  const midX = PAD + (W - PAD*2) * 0.42;
+  svgContent += `<line x1="${midX}" y1="20" x2="${midX}" y2="${H-40}" stroke="#D8D0BB" stroke-dasharray="3,3"/>`;
+  svgContent += `<line x1="${PAD}" y1="${(H-40+20)/2}" x2="${W-20}" y2="${(H-40+20)/2}" stroke="#D8D0BB" stroke-dasharray="3,3"/>`;
+
+  svgContent += `<text x="${PAD+8}" y="34" font-family="IBM Plex Mono" font-size="10" fill="#8B8574">FIX NOW — rare but severe</text>`;
+  svgContent += `<text x="${W-190}" y="34" font-family="IBM Plex Mono" font-size="10" fill="#8B8574">ACTIVE FIRES</text>`;
+  svgContent += `<text x="${PAD+8}" y="${H-46}" font-family="IBM Plex Mono" font-size="10" fill="#8B8574">WATCH LIST</text>`;
+  svgContent += `<text x="${W-230}" y="${H-46}" font-family="IBM Plex Mono" font-size="10" fill="#8B8574">HIGH VOLUME, MANAGEABLE</text>`;
+
+  svgContent += `<line x1="${PAD}" y1="${H-40}" x2="${W-20}" y2="${H-40}" stroke="#1E2A26" stroke-width="1.5"/>`;
+  svgContent += `<line x1="${PAD}" y1="20" x2="${PAD}" y2="${H-40}" stroke="#1E2A26" stroke-width="1.5"/>`;
+  svgContent += `<text x="${(W)/2}" y="${H-8}" font-family="IBM Plex Mono" font-size="10" fill="#1E2A26" text-anchor="middle">FREQUENCY (review count) →</text>`;
+  svgContent += `<text x="20" y="14" font-family="IBM Plex Mono" font-size="10" fill="#1E2A26">↑ SEVERITY</text>`;
+
+  DATA.themes.forEach(t => {
+    const cx = x(t.count);
+    const cy = y(sevY[t.severity]);
+    const r = CONF_SIZE[t.confidence] || 6;
+    const color = SEV_COLOR[t.severity];
+    svgContent += `<circle cx="${cx}" cy="${cy}" r="${r}" fill="${color}" fill-opacity="0.85" stroke="${color}" stroke-width="1"/>`;
+  });
+
+  svg.innerHTML = svgContent;
+}
+
+function renderList() {
+  const list = document.getElementById('ticket-list');
+  list.innerHTML = '';
+  sorted.forEach((t, i) => {
+    const div = document.createElement('div');
+    div.className = 'ticket sev-' + t.severity + (i===0 ? ' active' : '');
+    div.dataset.index = i;
+    div.innerHTML = `
+      <div class="ticket-top">
+        <div class="ticket-name">${t.theme_name}</div>
+        <div class="badge sev-${t.severity}">${t.severity}</div>
+      </div>
+      <div class="ticket-meta">${t.count} reviews · ${t.percent_of_sample}% · confidence: ${t.confidence}</div>
+    `;
+    div.addEventListener('click', () => selectTicket(i));
+    list.appendChild(div);
+  });
+}
+
+function selectTicket(i) {
+  document.querySelectorAll('.ticket').forEach(el => el.classList.remove('active'));
+  document.querySelector(`.ticket[data-index="${i}"]`).classList.add('active');
+  const t = sorted[i];
+  const detail = document.getElementById('detail');
+  detail.innerHTML = `
+    <div class="detail-head">
+      <h3 class="detail-title">${t.theme_name}</h3>
+      <div class="badge sev-${t.severity}">${t.severity}</div>
+    </div>
+    <div class="detail-meta">${t.count} reviews (${t.percent_of_sample}% of sample) · confidence: ${t.confidence}</div>
+    <div class="detail-block">
+      <h4>Root cause</h4>
+      <p>${t.root_cause}</p>
+    </div>
+    <div class="detail-block">
+      <h4>Recommendation</h4>
+      <p>${t.recommendation}</p>
+    </div>
+    <div class="detail-block">
+      <h4>Source quotes</h4>
+      ${t.example_quotes.map(q => `<div class="quote">"${q.quote}"<span class="rid">${q.review_id}</span></div>`).join('')}
+    </div>
+  `;
+}
+
+drawQuadrant();
+renderList();
+selectTicket(0);
+</script>
+
+</body>
+</html>

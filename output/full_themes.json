@@ -1,0 +1,274 @@
+{
+  "sample_size": 153,
+  "themes": [
+    {
+      "theme_name": "Service Cancellations & Rescheduling",
+      "count": 23,
+      "percent_of_sample": 15.03,
+      "example_quotes": [
+        {
+          "review_id": "840ef51d-7d2c-4ffb-99b1-a7455c3cd8d9",
+          "quote": "rescheduled booking 2 times and ultimately cancelled from system."
+        },
+        {
+          "review_id": "0eaf04cc-c725-42e4-9c32-336d3dee0e1e",
+          "quote": "I've spent two months dealing with forced cancellations and constant rescheduling requests to later dates."
+        },
+        {
+          "review_id": "c1c72a5d-456f-40f1-8d23-d4b7f216b1ee",
+          "quote": "They tempt customers to book maid services using promotional codes, but then cancel the service just one day before, seemingly because the discounted booking earns them less."
+        }
+      ],
+      "sentiment_note": "Highly negative. Customers frequently experience last-minute cancellations or forced rescheduling, leading to significant inconvenience, wasted time, and unfulfilled service needs. This is exacerbated by the perception that cancellations are due to pricing or lack of available personnel.",
+      "recommendation": "Implement a more robust scheduling and resource allocation system to minimize last-minute cancellations. Provide clear, proactive communication when cancellations are unavoidable, including guaranteed alternative slots or compensation. Investigate and address the root causes of professional no-shows or cancellations.",
+      "confidence": "high"
+    },
+    {
+      "theme_name": "Poor/Unresponsive Customer Support (AI Bots, No Human Contact)",
+      "count": 23,
+      "percent_of_sample": 15.03,
+      "example_quotes": [
+        {
+          "review_id": "840ef51d-7d2c-4ffb-99b1-a7455c3cd8d9",
+          "quote": "No point in replying here Untrustworthy service .no customer care just Useless AI with repeated responses."
+        },
+        {
+          "review_id": "6577a371-33a4-47c3-b2b5-68bb5deae937",
+          "quote": "No dedicated customer care support instead some AI bot to handle complaints/issues."
+        },
+        {
+          "review_id": "14cbc3dc-5aaa-4d64-83ce-6b0fea1380cb",
+          "quote": "Now, I can't even get in touch with a customer support agent to resolve the issue."
+        }
+      ],
+      "sentiment_note": "Strongly negative. Customers are frustrated by the inability to reach a human customer service representative, often being stuck with ineffective AI chatbots that provide generic or unhelpful responses. This leads to unresolved issues, increased anger, and a perception of disregard for customer problems.",
+      "recommendation": "Integrate a clear escalation path to human support within the app for complex or unresolved issues. Train human agents to handle escalations effectively and empathetically. Review AI chatbot scripts and capabilities to ensure they can genuinely assist with common queries and triage complex ones appropriately.",
+      "confidence": "high"
+    },
+    {
+      "theme_name": "Pricing Discrepancies & Hidden Charges",
+      "count": 22,
+      "percent_of_sample": 14.38,
+      "example_quotes": [
+        {
+          "review_id": "d81fbd58-46fb-4eab-baf2-9b7d0d5069f2",
+          "quote": "Urban Company shows a low price before booking but charges a much higher amount after the visit. This is misleading and feels like a pricing scam."
+        },
+        {
+          "review_id": "a15b73c6-85da-44d6-9c4e-fb95ba687e88",
+          "quote": "Deceptive bait-and-switch! They lure you with a ₹49 service, but sneakily add a ₹99 visitation fee and platform charges, auto-debiting ₹158 from your wallet without showing a final total screen."
+        },
+        {
+          "review_id": "abdff706-8a07-4ce1-a2df-05311858421e",
+          "quote": "nowhere they mention about this cancellation charges. suppose to be in the booking page. but don't. careful about this unprofessional practice, you will loose money."
+        }
+      ],
+      "sentiment_note": "Highly negative. Customers feel cheated by bait-and-switch pricing, where advertised low costs escalate significantly with hidden fees (visitation, platform, taxes) or unexpected cancellation charges. Lack of transparency in the final bill and automatic deductions further erode trust.",
+      "recommendation": "Ensure all potential charges, including visitation fees, platform fees, and cancellation penalties, are clearly displayed and itemized *before* booking confirmation. Implement a transparent final total screen before any payment is processed. Re-evaluate cancellation fee policies to be more customer-friendly, especially when cancellations originate from the service provider's side.",
+      "confidence": "high"
+    },
+    {
+      "theme_name": "Unprofessional Technician Conduct & Misconduct",
+      "count": 19,
+      "percent_of_sample": 12.42,
+      "example_quotes": [
+        {
+          "review_id": "74b52b11-70d8-4b31-9909-929a18d98107",
+          "quote": "Technician came to my house and threaten to my mother. And steal all money and jewelries."
+        },
+        {
+          "review_id": "438f87ed-4588-4c09-8643-af73742d9f73",
+          "quote": "you book services for female members of your family, and they will assign some random male professional, it almost looks like they intentionally want to promote this filth. This is the platform which is least concerned about women safety."
+        },
+        {
+          "review_id": "005fe810-9c84-4481-8d47-b54d27d4d8bc",
+          "quote": "The AC cleaning technician completed the service and then took my phone and submitted a 5-star rating himself without asking for my permission."
+        }
+      ],
+      "sentiment_note": "Extremely negative. Customers report severe issues ranging from rude behavior, forcing 5-star ratings, abandoning jobs, arriving without tools, to serious safety concerns including theft and inappropriate assignment of male professionals for female clients. This directly impacts safety, trust, and service delivery.",
+      "recommendation": "Strengthen background checks and ongoing performance monitoring for all professionals. Implement clear guidelines and immediate disciplinary action for misconduct (theft, intimidation, forced ratings). Introduce a gender preference option for sensitive services. Ensure technicians are properly equipped for jobs. Investigate claims thoroughly and provide compensation for damages or incomplete work.",
+      "confidence": "high"
+    },
+    {
+      "theme_name": "Faulty Workmanship & Incomplete Service",
+      "count": 14,
+      "percent_of_sample": 9.15,
+      "example_quotes": [
+        {
+          "review_id": "95d3d28a-7bca-4c8b-940b-d58bec25f6a7",
+          "quote": "After my first AC service, the AC started leaking water within days because the outdoor unit wasn't serviced properly, forcing me to pay for another visit."
+        },
+        {
+          "review_id": "14cbc3dc-5aaa-4d64-83ce-6b0fea1380cb",
+          "quote": "The electrician sent by the company ended up damaging my ceiling fan."
+        },
+        {
+          "review_id": "90a6276f-3dd3-4e2f-8fa5-c59e8cfa7641",
+          "quote": "Worst for deep cleaning, please never call them for any cleaning activities. ...they were doing it very unhygienically and they only care about showing it clean and then spray a freshner."
+        }
+      ],
+      "sentiment_note": "Highly negative. Customers frequently experience poor quality of work, leading to new problems, damaged property, unhygienic practices, or incomplete jobs. This indicates a lack of skill, diligence, or proper training among some service professionals.",
+      "recommendation": "Enhance training and quality assurance processes for all service categories. Implement stricter post-service checks or customer feedback mechanisms that flag poor workmanship. Provide a clear and swift resolution process for customers whose property is damaged or whose service is unsatisfactory due to poor workmanship.",
+      "confidence": "high"
+    },
+    {
+      "theme_name": "Misdiagnosis, Upselling, and Technician-driven Overcharging",
+      "count": 11,
+      "percent_of_sample": 7.19,
+      "example_quotes": [
+        {
+          "review_id": "ccbf6b1c-14f4-4afa-af74-0ae3456f118d",
+          "quote": "The technician visited, checked the refrigerator, and immediately said the sensor was faulty ... When the Haier technician came, they found that the sensor was perfectly fine,the actual issue was simply low refrigerant gas."
+        },
+        {
+          "review_id": "ab0dac5d-f16e-4c43-8235-e573df3b55f7",
+          "quote": "Machnic aaya usne check kiya bola PCB aur fan motor kharab hai low air rahi hai. kul 4800 ka kharcha lagega ... Bahar ke dusre mechanic ko dikhaya usne bataya ac choke ho gaya hai usko utaar ke service karni padegi 1200 me"
+        },
+        {
+          "review_id": "95d3d28a-7bca-4c8b-940b-d58bec25f6a7",
+          "quote": "Instead, they added an unnecessary AC Service Lite and charged extra despite my AC already being serviced twice."
+        }
+      ],
+      "sentiment_note": "Strongly negative. Customers are being charged excessive amounts due to technician misdiagnosis, unnecessary upselling, or fabricated issues, often resulting in paying for services not needed or for inflated repair costs compared to local vendors.",
+      "recommendation": "Implement a mandatory second opinion or an independent diagnostic review for high-cost repairs. Provide transparent pricing for common repairs and parts, with strict enforcement against upselling unnecessary services. Conduct regular audits of technician diagnostics and billing practices to identify and address fraudulent behavior.",
+      "confidence": "high"
+    },
+    {
+      "theme_name": "Warranty Issues & Lack of Post-Service Support",
+      "count": 11,
+      "percent_of_sample": 7.19,
+      "example_quotes": [
+        {
+          "review_id": "934fb645-cf8e-462d-b483-2ab6e35bcd5d",
+          "quote": "Their gas refilling in AC doesn't even last 2 months even after their technician fixes all the 'leakages' before gas charging. They have reduced warranty period from 3 months to 1 month. ... 2Y warranty is a scam."
+        },
+        {
+          "review_id": "42e337e1-5c8f-48a8-b4ae-3f2737c0adaa",
+          "quote": "They claimed a 90-day warranty, but within just 28 days the same issue came back. When I contacted support, they refused service and said I need to book again and pay again."
+        },
+        {
+          "review_id": "6f587a78-8d6b-4d23-9aa5-c77739bde691",
+          "quote": "I purchased a Native M1 Water Filter, and within a year, the water tap got damaged. ... The app offers no proper service option for this product, and there is no way to contact an authorized customer support representative"
+        }
+      ],
+      "sentiment_note": "Highly negative. Customers face significant problems with warranties not being honored, reduced warranty periods, and lack of support for issues recurring shortly after service. This is particularly problematic for Native RO products, where after-sales service is reported as non-existent or difficult to access.",
+      "recommendation": "Standardize and clearly communicate warranty policies for all services and products, ensuring they are transparent and consistently applied. Streamline the warranty claim process within the app and ensure dedicated support for Native RO products. Investigate recurring issues to improve initial service quality and prevent early failures.",
+      "confidence": "high"
+    },
+    {
+      "theme_name": "Issues with InstaHelp & Booking Availability",
+      "count": 11,
+      "percent_of_sample": 7.19,
+      "example_quotes": [
+        {
+          "review_id": "c51efd15-4f74-4d08-aa8f-d5b23923c84a",
+          "quote": "Their Insta Help is never available and neither are their slots. I spoke to them multiple times but no solution. Their service agents are good provided you are lucky to book a slot. They don't have any slots after 4.00 pm another drawback."
+        },
+        {
+          "review_id": "cabd47f0-cca1-4bf4-8387-65f375c322f2",
+          "quote": "This app is terrible; the 'Instahelp' feature is particularly bad. They initially told me to buy a three-booking package and use it within a month, but now, whenever I open the app to book, it shows 'not available.'"
+        },
+        {
+          "review_id": "efa989f3-4422-456f-b3a7-6e4b227f584f",
+          "quote": "I booked insta help one day before still no one came... this has happened multiple times.. what is the point of taking the booking if you don't have person to work..."
+        }
+      ],
+      "sentiment_note": "Highly negative. Customers are unable to book InstaHelp or regular services due to persistent unavailability of slots, especially during popular times. This defeats the purpose of 'InstaHelp' and leads to frustration, wasted package purchases, and a perception of false advertising.",
+      "recommendation": "Improve real-time availability displays and proactively manage booking capacity to prevent unavailable slots. Re-evaluate the 'InstaHelp' promise if instant availability cannot be consistently met. Consider dynamic pricing or incentives to increase professional availability during peak hours or for immediate bookings.",
+      "confidence": "high"
+    },
+    {
+      "theme_name": "App/Platform Usability & Technical Glitches",
+      "count": 10,
+      "percent_of_sample": 6.54,
+      "example_quotes": [
+        {
+          "review_id": "fdf6d769-8bd5-4fec-85a5-482118f4a52c",
+          "quote": "app is not user friendly."
+        },
+        {
+          "review_id": "316e1b59-fd0d-4a06-91d0-fe0bf5e6e992",
+          "quote": "help section is not loading any options."
+        },
+        {
+          "review_id": "94e567ab-2722-4aea-9584-b062ee12baf7",
+          "quote": "When maid comes at 8am give her otp.It wont work.9am otp will work for 8am booking. Bad design"
+        }
+      ],
+      "sentiment_note": "Negative. Users encounter various technical issues and usability challenges with the app, including unresponsive help sections, incorrect OTP logic, and generally poor user experience. This hinders their ability to manage bookings, seek support, or understand service details.",
+      "recommendation": "Conduct thorough UX/UI audits and user testing to identify and rectify usability issues. Prioritize fixing critical bugs, especially those impacting OTP functionality and access to help sections. Ensure consistent app performance and reliable display of information.",
+      "confidence": "medium"
+    },
+    {
+      "theme_name": "Membership & Package Issues",
+      "count": 8,
+      "percent_of_sample": 5.23,
+      "example_quotes": [
+        {
+          "review_id": "46560396-9a1b-4075-a134-8d2f84889f5d",
+          "quote": "first they push you to buy packs and then stop serving your request. when you decide to cancel the pack to be able to take the regular service, they charge a hefty cancellation charge , that your entire money is taken away."
+        },
+        {
+          "review_id": "470e63f7-1b46-4254-a0da-2fa852cfc469",
+          "quote": "super saver pack is scam. plus the ai help chatbot is unable to resolve queries and also cancels subscription."
+        },
+        {
+          "review_id": "41aee278-7d37-45c8-9fd0-1fc8b201e31c",
+          "quote": "The membership benefits are totally useless. I paid for the annual membership and didn't even get a discount on a plumbing job."
+        }
+      ],
+      "sentiment_note": "Negative. Customers feel misled or scammed by membership and package offerings (e.g., Super Saver packs, InstaHelp packages). They experience unavailability of services after purchase, difficulty canceling, exorbitant cancellation fees, and perceive the promised benefits (like discounts) as non-existent or useless.",
+      "recommendation": "Clearly define and consistently deliver the value proposition of memberships and packages. Ensure sufficient service availability for package holders. Revise cancellation policies for packages to be fairer, particularly when services are unavailable. Provide transparent tracking of membership benefits and usage.",
+      "confidence": "high"
+    },
+    {
+      "theme_name": "Geographic Service Limitations & Cut-offs",
+      "count": 5,
+      "percent_of_sample": 3.27,
+      "example_quotes": [
+        {
+          "review_id": "c189d0a8-271a-4ba0-a751-7622f65ed2d2",
+          "quote": "a few months ago most of the services were available, my family's microwave and washing machine was fixed by these guys, ...but all of a sudden most of the service in my area got cut off, It was really convenient before, please bring it back."
+        },
+        {
+          "review_id": "0b438591-ff73-4128-b850-cf89fa6daa00",
+          "quote": "it's not available in our area pls be available in our area"
+        },
+        {
+          "review_id": "25ca8e7d-1463-4ef9-ace3-ab330ca7acd4",
+          "quote": "They stopped the insta help facility in my area"
+        }
+      ],
+      "sentiment_note": "Negative. Customers are disappointed by the sudden unavailability of services in their areas, or by geographical limitations preventing them from booking, especially for services previously available. This causes inconvenience and a loss of a previously valued service provider.",
+      "recommendation": "Clearly communicate service area coverage and any changes to it. If service areas are being reduced, provide advance notice and alternative solutions where possible. Explore strategies to expand service coverage or reintroduce services in areas where demand is evident.",
+      "confidence": "high"
+    },
+    {
+      "theme_name": "Partner/Employee Treatment & Payment Issues",
+      "count": 5,
+      "percent_of_sample": 3.27,
+      "example_quotes": [
+        {
+          "review_id": "3eec2391-59b6-4a65-a448-880ab2cce50b",
+          "quote": "This company only knows how to exploit hard-working partners. They charge massive commissions and enforce heavy penalties without any proper validation from the partner's side."
+        },
+        {
+          "review_id": "35b740b9-af76-4cd7-a2a4-6069d0e6be49",
+          "quote": "My mother is a UC partner in Hyderabad. She completed her work, but her payment of ₹8,000 has not been received. It has been 4 days already."
+        },
+        {
+          "review_id": "fd69edb5-163b-4afc-8a0e-dd02f773b82c",
+          "quote": "shame on how you treat your employees. Treat them with respect and transparency."
+        }
+      ],
+      "sentiment_note": "Negative. Concerns are raised by both partners/employees and customers about unfair treatment of service professionals, including delayed payments, high commissions, penalties without validation, and lack of transparency and respect. This indirectly impacts service quality and partner retention.",
+      "recommendation": "Review and revise partner commission structures and penalty policies to ensure fairness and transparency. Implement a clear and reliable payment system for partners, with timely disbursements. Establish a robust dispute resolution process for partners to address payment and penalty concerns.",
+      "confidence": "medium"
+    }
+  ],
+  "long_tail": [
+    "Complaints about general bad service or overall negative experience without specific details (e.g., 'worst app', 'horrible service', 'don't trust').",
+    "Specific product issues (e.g. M2 pro connectivity).",
+    "Complaints comparing Urban Company unfavorably to competitors (e.g., Snabbit, Yes Madam)."
+  ]
+}

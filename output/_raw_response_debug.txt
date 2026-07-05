@@ -1,0 +1,19 @@
+{
+  "sample_size": 153,
+  "themes": [
+    {
+      "theme_name": "Inadequate Customer Support & Over-reliance on Chatbots",
+      "count": 24,
+      "percent_of_sample": 15.69,
+      "example_quotes": [
+        {
+          "review_id": "840ef51d-7d2c-4ffb-99b1-a7455c3cd8d9",
+          "quote": "If at all you care to resolve any issue , Give an option to escalate to human customer care in the app . No point in replying here Untrustworthy service . no customer care just Useless AI with repeated responses."
+        },
+        {
+          "review_id": "d6d94d3c-f28c-437b-b9ff-462debb2eac1",
+          "quote": "NO human assistance in support. only chatbot, doesn't matter whether your problem is resolved."
+        },
+        {
+          "review_id": "b0ca32aa-5385-4897-b159-dbbc7cff5d27",
+          "quote": "Pathetic customer service. They loot you, and u have to keep talking to their BOT, and it

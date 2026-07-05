@@ -1,0 +1,188 @@
+{
+  "sample_size": 153,
+  "themes": [
+    {
+      "theme_name": "Unreliable Bookings and Cancellations (Instahelp & general)",
+      "count": 31,
+      "percent_of_sample": 20.26,
+      "example_quotes": [
+        {
+          "review_id": "1d31d79c-d7ec-456b-a0c0-e9cc8771487c",
+          "quote": "Don't trust Urban company anymore for insta help. if you have done prior booking for weekend they will cancel it last moment and then no slot will be available for the day."
+        },
+        {
+          "review_id": "f64ab595-0d55-4af0-9337-d8700e52ea97",
+          "quote": "Very poor service My booking got rescheduled twice because of very poor and unprofessional reasons. the service professional forgot his machine, other day he was not able to come."
+        },
+        {
+          "review_id": "0c9292df-939d-4024-a831-621a5840ba3c",
+          "quote": "extremely disappointing experience with instant help. In one day they've cancelled 4 bookings back to back at the last minute and when contacted the customer care there were very lame computerised replies."
+        }
+      ],
+      "sentiment_note": "Extremely negative. Customers frequently experience last-minute cancellations, multiple reschedules, and unavailability of slots, especially for 'Instahelp' services, leading to wasted time and frustration.",
+      "root_cause": "Likely due to insufficient supply of service professionals for the demand, poor workforce management/scheduling, or a system that allows professionals to cancel without adequate penalty or a robust backup system. The 'Instahelp' feature seems particularly impacted, suggesting a mismatch between its promised immediacy and actual resource availability.",
+      "recommendation": "Improve real-time availability and scheduling algorithms to prevent overbooking and last-minute cancellations. Implement a stronger penalty system for professionals who cancel without valid reasons and ensure a robust backup system for 'Instahelp' to assign alternative professionals quickly. Clearly communicate realistic availability upfront.",
+      "confidence": "high",
+      "severity": "high"
+    },
+    {
+      "theme_name": "Poor or Non-Existent Customer Support (AI Chatbot focus)",
+      "count": 21,
+      "percent_of_sample": 13.73,
+      "example_quotes": [
+        {
+          "review_id": "840ef51d-7d2c-4ffb-99b1-a7455c3cd8d9",
+          "quote": "No point in replying here Untrustworthy service ... no customer care just Useless AI with repeated responses."
+        },
+        {
+          "review_id": "9302c87c-76ca-47ea-91e2-d19b322df3fc",
+          "quote": "native has no way of uplifting customers chats for tech support ..on top of that really incompetent customer service who can't understand simple things and complicate issues and waste time and money"
+        },
+        {
+          "review_id": "b23d232f-a389-44c0-aa01-c69b2c90bb5f",
+          "quote": "when you have a problem with a professional, u can't connect to customer care they will suggest talking to a robot and they will give you a prototype answer .This app is so bad."
+        }
+      ],
+      "sentiment_note": "Highly negative. Customers are frustrated by the inability to reach a human customer service representative, being stuck with unresponsive AI chatbots, and receiving templated, unhelpful responses to critical issues.",
+      "root_cause": "Over-reliance on automated AI chatbots for complex or sensitive issues where human intervention is required, and a lack of clear pathways for escalation to human support within the app/system. This suggests a cost-saving measure that negatively impacts customer resolution.",
+      "recommendation": "Integrate an escalation path for AI chatbot interactions to human customer service for unresolved or complex issues. Provide clear contact information (phone number, direct email) for customer support within the app, especially for paid services or safety concerns.",
+      "confidence": "high",
+      "severity": "high"
+    },
+    {
+      "theme_name": "Deceptive Pricing and Hidden Charges",
+      "count": 14,
+      "percent_of_sample": 9.15,
+      "example_quotes": [
+        {
+          "review_id": "1ae5b7bf-deb8-414c-bc2e-c2d568b3a07b",
+          "quote": "The prices were unfairly overly priced and the service is not up to the mark."
+        },
+        {
+          "review_id": "a15b73c6-85da-44d6-9c4e-fb95ba687e88",
+          "quote": "Deceptive bait-and-switch! They lure you with a ₹49 service, but sneakily add a ₹99 visitation fee and platform charges, auto-debiting ₹158 from your wallet without showing a final total screen."
+        },
+        {
+          "review_id": "d81fbd58-46fb-4eab-baf2-9b7d0d5069f2",
+          "quote": "Very disappointing experience. Urban Company shows a low price before booking but charges a much higher amount after the visit. This is misleading and feels like a pricing scam."
+        }
+      ],
+      "sentiment_note": "Strongly negative. Customers feel cheated by misleading initial pricing, unexpected visitation fees, platform charges, and inflated prices for parts or services post-visit. There's a perceived lack of transparency in the billing process.",
+      "root_cause": "System design that allows for dynamic pricing or additional fees to be added after initial booking confirmation without clear, upfront disclosure. This may also stem from professionals upselling unnecessary services or parts at inflated prices without adequate oversight.",
+      "recommendation": "Implement a transparent, final price confirmation screen before payment, clearly detailing all charges (service fee, visitation fee, platform fee, taxes). Mandate professionals to provide itemized quotes for parts/additional services within the app, approved by the customer, before proceeding with work.",
+      "confidence": "high",
+      "severity": "high"
+    },
+    {
+      "theme_name": "Substandard Service Quality and Unprofessional Technicians",
+      "count": 13,
+      "percent_of_sample": 8.5,
+      "example_quotes": [
+        {
+          "review_id": "95d3d28a-7bca-4c8b-940b-d58bec25f6a7",
+          "quote": "After my first AC service, the AC started leaking water within days because the outdoor unit wasn't serviced properly... Poor workmanship, unnecessary upselling, and lack of transparency."
+        },
+        {
+          "review_id": "ccbf6b1c-14f4-4afa-af74-0ae3456f118d",
+          "quote": "The technician visited, checked the refrigerator, and immediately said the sensor was faulty and advised me to call the Haier service team instead. When the Haier technician came, they found that the sensor was perfectly fine,the actual issue was simply low refrigerant gas."
+        },
+        {
+          "review_id": "ab0dac5d-f16e-4c43-8235-e573df3b55f7",
+          "quote": "Bewakoof banane wala machnic Mera AC no cooling ki complete ke thee Machnic aaya usne check kiya bola PCB aur fan motor kharab hai low air rahi hai. kul 4800 ka kharcha lagega Maine ₹340 adv me deker usko wapas Kiya Bahar ke dusre mechanic ko dikhaya usne bataya ac choke ho gaya hai usko utaar ke service karni padegi 1200 me uninstall Kiya fir install Ac naya jaisa Fir Ho Gaya badhiya cooling Kar Raha Hai hawa ka flow bhi achcha hai uc company chor company Urban"
+        }
+      ],
+      "sentiment_note": "Highly negative. Customers report receiving poor quality work, misdiagnosis, unnecessary upselling, and technicians who are unprofessional, unskilled, or lack proper tools. This often leads to further problems or incomplete jobs.",
+      "root_cause": "Inadequate vetting, training, or quality control for service professionals. Lack of standardized diagnostic procedures or quality checks after service completion. Potential incentive structures that encourage upselling or misdiagnosis rather than accurate problem resolution.",
+      "recommendation": "Strengthen professional training and certification programs. Implement mandatory checklists for diagnostics and service completion. Introduce a post-service quality assurance mechanism (e.g., follow-up calls, random inspections) and ensure a clear channel for customers to report poor workmanship without fear of retaliation.",
+      "confidence": "high",
+      "severity": "high"
+    },
+    {
+      "theme_name": "Refund Issues and Warranty Not Honored",
+      "count": 10,
+      "percent_of_sample": 6.54,
+      "example_quotes": [
+        {
+          "review_id": "96227df0-3ada-495c-8a46-c07fb4ac9678",
+          "quote": "They charged me 200 for the service I didn't even availed. Worst customer centric company"
+        },
+        {
+          "review_id": "d3a6e040-b8dc-4023-b0f8-8756c5d4905f",
+          "quote": "UC is not refunding the ₹9000/- they charged for PCB repair of my AC which got damaged beyond repair within the warranty. They are not even bothering to respond to my messages on chat. This is a fraud."
+        },
+        {
+          "review_id": "6fd192d8-b636-4dbd-bedf-f0ad1db3d371",
+          "quote": "warranty given on ac servicing was of 30 days and the issue reoccurred and when I went back to claim my warranty i am shocked to see it's decreased to 10 days and already expired!! taking it to consumer court"
+        }
+      ],
+      "sentiment_note": "Highly negative. Customers are denied refunds for unrendered services, charged cancellation fees unfairly, or find their warranties are not honored or have been unilaterally shortened. This leads to financial loss and feelings of being defrauded.",
+      "root_cause": "Inconsistent application of refund policies, opaque cancellation fee structures, and a lack of clear, enforced warranty terms. Poor record-keeping of service history and warranty periods. The inability to connect with human customer support exacerbates refund/warranty issues.",
+      "recommendation": "Standardize and clearly publish all refund and warranty policies. Ensure the system automatically processes appropriate refunds for canceled or unfulfilled services. Train customer support to handle warranty claims efficiently and provide transparent reasoning for any denials.",
+      "confidence": "high",
+      "severity": "critical"
+    },
+    {
+      "theme_name": "Safety Concerns and Misconduct by Professionals",
+      "count": 6,
+      "percent_of_sample": 3.92,
+      "example_quotes": [
+        {
+          "review_id": "438f87ed-4588-4c09-8643-af73742d9f73",
+          "quote": "By design this app is not safe, you book services for female members of your family, and they will assign some random male professional, it almost looks like they intentionally want to promote this filth. This is the platform which is least concerned about women safety."
+        },
+        {
+          "review_id": "74b52b11-70d8-4b31-9909-929a18d98107",
+          "quote": "Don't book any service from Urban Company. Technician came to my house and threaten to my mother. And steal all money and jewelries. I have tried to call Urban Company emergency number but they didn't not picked my phone."
+        },
+        {
+          "review_id": "005fe810-9c84-4481-8d47-b54d27d4d8bc",
+          "quote": "The AC cleaning technician completed the service and then took my phone and submitted a 5-star rating himself without asking for my permission."
+        }
+      ],
+      "sentiment_note": "Extremely negative and alarming. Customers report serious safety concerns including theft, threatening behavior, privacy violations (forced 5-star ratings), and inappropriate gender assignments for sensitive services, with inadequate response from the company.",
+      "root_cause": "Insufficient background checks and vetting for professionals. Lack of clear safety protocols and an effective emergency response system. Poor enforcement of professional conduct standards. The company's customer support system fails to adequately address and investigate serious complaints.",
+      "recommendation": "Implement rigorous background checks for all professionals. Establish and clearly communicate safety protocols, including options for female-only professionals for sensitive services. Create a dedicated, responsive emergency helpline for safety incidents. Investigate all allegations of theft or misconduct promptly and take decisive action.",
+      "confidence": "high",
+      "severity": "critical"
+    },
+    {
+      "theme_name": "Issues with Native RO Products & Warranty",
+      "count": 7,
+      "percent_of_sample": 4.58,
+      "example_quotes": [
+        {
+          "review_id": "6295d67a-4291-4032-a718-0821dce1da68",
+          "quote": "I have purchased native ro machine on Nov 2025, it is in 2 years warranty. my ro machine is not working properly so I want warranty service from company but the urban company app is not responding with me."
+        },
+        {
+          "review_id": "934fb645-cf8e-462d-b483-2ab6e35bcd5d",
+          "quote": "They also do not honor their warranty claim on their Native RO by making excuses which are not mentioned anywhere in their terms. Stay away from UC and Native RO. 2Y warranty is a scam."
+        },
+        {
+          "review_id": "6f587a78-8d6b-4d23-9aa5-c77739bde691",
+          "quote": "I purchased a Native M1 Water Filter, and within a year, the water tap got damaged. I paid ₹316 for a repair request, but even after 10 days, no technician has visited. The app offers no proper service option for this product, and there is no way to contact an authorized customer support representative."
+        }
+      ],
+      "sentiment_note": "Strongly negative. Customers face problems with the functionality of Native RO products and encounter significant difficulties in getting warranty service or technical support, often due to app issues or unresponsive customer care.",
+      "root_cause": "Lack of dedicated, accessible support channels for Native RO products within the app. Inadequate training or availability of technicians specialized in Native RO repair. Possible product quality issues leading to frequent breakdowns. Warranty terms may not be clearly communicated or consistently honored.",
+      "recommendation": "Create a dedicated support flow within the app for Native RO products, ensuring clear access to technicians and warranty claims. Train a specialized pool of technicians for Native RO maintenance and repair. Review product quality control and ensure warranty terms are transparent and consistently applied.",
+      "confidence": "high",
+      "severity": "high"
+    }
+  ],
+  "long_tail": [
+    "Unfair exploitation of service partners (high commissions, penalties, lack of safety/respect)",
+    "Removal/discontinuation of services or popular features in certain areas (e.g., Instahelp, specific beauty treatments)",
+    "Misleading information in service descriptions (e.g., chimney cleaning, massage services)",
+    "Damaged property by technicians with no resolution or refund",
+    "App showing 'something went wrong' or not loading options, leading to loss of money and time",
+    "High platform fees/taxes that disproportionately affect technicians' earnings",
+    "Membership benefits (Super Saver Pack) are perceived as useless or lead to unfulfilled bookings",
+    "App design flaws (e.g., OTP issues, inability to update address, missing COD option, inability to cancel)",
+    "Negative experiences with cleaning services (unhygienic practices, stains, denial to work)",
+    "AC gas refilling issues where gas doesn't last long, or technicians offer private services outside UC",
+    "Inability to connect M2 Pro/Native products",
+    "Company not available in customer's specific geographic area",
+    "Complaints about the treatment of employees/partners and unfair policies towards them"
+  ]
+}
